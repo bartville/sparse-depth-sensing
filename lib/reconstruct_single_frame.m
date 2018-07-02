@@ -32,6 +32,7 @@ if isKinectDataset(settings) && sum(rgb(:)) == 0
   return
 end
 
+odometry = struct;
 % convert raw data to point cloud
 if strcmp(settings.pc_frame, 'body')
   % create null odometry information
